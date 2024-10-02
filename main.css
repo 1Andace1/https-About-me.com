@@ -1,0 +1,131 @@
+
+.navbar{
+    background-color: black;
+    padding: 40px;
+    height: 25px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+}
+.navbar li {
+    margin: 0 20px; 
+    position: relative;
+}
+
+.navbar a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+.navbar a:hover {
+    color: #f0a500; 
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+.navbar a:hover {
+    transform: translateY(-3px); 
+    color: #f0a500;
+}
+img {
+    width: 20%;
+    height: auto; 
+    display: block; 
+    border-radius: 100px; 
+}
+.container {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    width: 80%; 
+    padding: 100px;
+    height: 400px;
+    width: 50%;
+    margin: 0 auto; 
+}
+h1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 100px; 
+    text-align: center;
+    align-items: center; 
+}
+.container div:last-child {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;
+    width: 100%;
+}
+.container div:last-child img {
+    width: 50px;
+    height: auto; 
+    margin: 0 10px; 
+}
+body {
+    margin: 0; 
+    overflow: hidden; 
+}
+.button {
+    background-color: #f0a500; 
+    color: white; 
+    border: none; 
+    border-radius: 50px; 
+    padding: 15px 30px; 
+    font-size: 20px; 
+    cursor: pointer; 
+    text-align: center; 
+    display: inline-block; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative; 
+    overflow: hidden;
+}
+.button:hover {
+    background-color: #d48900; 
+    transform: scale(1.05); 
+}
+
+
+.button::before {
+    content: '';
+    position: absolute;
+    width: 300%; 
+    height: 300%; 
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.6); 
+    transform: translate(-50%, -50%) scale(0); 
+    border-radius: 50%; 
+    transition: transform 0.5s ease; 
+}
+
+.button:active::before {
+    transform: translate(-50%, -50%) scale(1); 
+}
+.button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    height: 100vh;
+    padding-top: 30px; 
+}
