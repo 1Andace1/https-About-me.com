@@ -5,38 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обо мне</title>
     <link rel="stylesheet" href="main.css">
-</head>
-<style>
-    body {
-        font-family: 'Calibri', sans-serif; 
-    }
-</style>
-<body>
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif; 
+        }
 
+        .button-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button {
+            background-color: #facc15;
+            padding: 16px 64px;
+            border-radius: 9999px;
+            color: black;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .button-wrapper:hover .button {
+            box-shadow: 0px 4px 15px rgba(0, 84, 163, 0.61); /* Добавляем тень */
+            background-color: #d6ae0f; /* При наведении фон становится более тусклым (уменьшение прозрачности) */
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #facc15;
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .dot-1 { top: -10px; left: -1px; }
+        .dot-2 { top: -10px; right: -10px; }
+        .dot-3 { bottom: -10px; left: -10px; }
+        .dot-4 { bottom: -10px; right: -10px; }
+        .dot-5 { top: 50%; left: -20px; }
+        .dot-6 { top: 50%; right: -20px; }
+        .dot-7 { bottom: -10px; left: 50%; }
+
+        .button-wrapper:hover .dot {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+
+        .button-wrapper:hover .dot-1 { transform: translate(-20px, -20px); }
+        .button-wrapper:hover .dot-2 { transform: translate(20px, -20px); }
+        .button-wrapper:hover .dot-3 { transform: translate(-20px, 20px); }
+        .button-wrapper:hover .dot-4 { transform: translate(20px, 20px); }
+        .button-wrapper:hover .dot-5 { transform: translate(-40px, 0); }
+        .button-wrapper:hover .dot-6 { transform: translate(40px, 0); }
+        .button-wrapper:hover .dot-7 { transform: translate(0, 40px); }
+    </style>
+</head>
+<body>
     <nav class="navbar">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider round"></span>
+        </label>
         <ul>
-            <li><a href="#">Главная</a></li>
+            <li><a href="#">Андрей Белых</a></li>
             <li><a href="#">Обо мне</a></li>
             <li><a href="#">Портфолио</a></li>
             <li><a href="#">Контакты</a></li>
         </ul>
+        <div class="github-wrapper">
+            <a href="https://github.com/1Andace1" class="github-btn">
+                <svg class="github-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.261.82-.577v-2.258c-3.338.725-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.775.419-1.305.762-1.605-2.665-.305-5.467-1.332-5.467-5.931 0-1.31.469-2.381 1.236-3.221-.123-.304-.536-1.528.117-3.183 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.655 1.655.242 2.879.119 3.183.77.84 1.236 1.911 1.236 3.221 0 4.61-2.806 5.624-5.478 5.921.43.371.814 1.103.814 2.222v3.293c0 .319.216.694.826.577 4.765-1.587 8.199-6.084 8.199-11.385 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub
+            </a>
+        </div>
     </nav>
 
-    <div class="container"> 
-        <img src="/img/IMG_5351.jpg" alt="">    
+    <div class="container">
+        <img src="/https-About-me.com/img/IMG_5351.jpg" alt="">
         <div>
-            <h1>hi i'm</h1> 
-            <h1>Andrey Belykh</h1> 
-            <h1>Frontend developer</h1> 
-
+            <h1>Hi, I'm</h1>
+            <h1>Andrey Belykh</h1>
+            <h1>Frontend Developer</h1>
             <div class="icons">
-                <img src="/img/Octicons-mark-github.svg" alt="GitHub">
-                <img src="/img/linkedin-svgrepo-com.svg" alt="LinkedIn">
+                <img src="/https-About-me.com/img/Octicons-mark-github.svg" alt="GitHub">
+                <img src="/https-About-me.com/img/linkedin-svgrepo-com.svg" alt="LinkedIn">
             </div>
         </div>
+        <span class="dot dot-6">
+            <img src="/https-About-me.com/img/pdf.svg" alt="Icon" />
+        </span>
+        <a href="/https-About-me.com/img/Белых Андрей (2).pdf" class="button-wrapper" download>
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+            <span class="dot dot-4"></span>
+            <span class="dot dot-5"></span>
+            <span class="dot dot-6"></span>
+            <span class="dot dot-7"></span>
+            <span class="button">Резюме</span>
+        </a>
     </div>
-    <div class="button-container">
-        <button class="button">Резюме</button>
-    </div>
+
+    <!-- Анимация текста -->
+    <div id="animaText" class="text"></div>
+    <span class="cursor">|</span>
+    <!-- Скрипт анимации -->
+    <script src="main.js"></script>
+    
 </body>
 </html>
