@@ -1,13 +1,16 @@
 .navbar {
+    position: fixed; /* Панель фиксируется */
+    top: 0; /* Закрепляем в верхней части экрана */
+    left: 0; /* Сдвигаем к левому краю */
+    width: 100%; /* Ширина на весь экран */
     background-color: black;
-    padding: 40px;
-    height: 25px;
-    width: 50%;
-    margin: 0 auto;
-    border-radius: 100px;
+    padding: 20px;
+    height: 60px; /* Высота панели */
+    z-index: 1000; /* Поверх остальных элементов */
     display: flex;
+    justify-content: center;
     align-items: center;
-    position: relative; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Добавляем тень */
 }
 .navbar ul {
     list-style-type: none;
@@ -270,7 +273,83 @@ body {
         opacity: 0; /* Прозрачный курсор */
     }
 }
+.about-section {
+    height: 100vh; /* Высота для демонстрации прокрутки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f0a500;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
 
+.back-to-top:hover {
+    background-color: #d48900;
+}
+
+.about-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgb(255, 255, 255); 
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 40px; 
+    max-width: 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.7s ease;
+}
+
+.card:hover {
+    background-color: #000000; 
+}
+
+.card p {
+    font-size: 20px; 
+    line-height: 2;
+    text-align: left; /* Текст по левой стороне */
+}
+.card p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #2422a1, #d52bff);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease;
+}
+.card:hover p:first-child {
+    color: rgb(32, 32, 32);
+}
+.about-section h1 {
+    text-align: center;
+}
 body {
+    margin: 0;
+    background-color: white;
+    color: black;
     transition: background-color 0.3s, color 0.3s;
 }

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обо мне</title>
+    <link rel="icon" href="/https-About-me.com/img/notebook.svg" type="img/png">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.js">
     <style>
         body {
             font-family: 'Calibri', sans-serif; 
+            scroll-behavior: smooth
         }
 
         .button-wrapper {
@@ -32,8 +35,8 @@
         }
 
         .button-wrapper:hover .button {
-            box-shadow: 0px 4px 15px rgba(0, 84, 163, 0.61); /* Добавляем тень */
-            background-color: #d6ae0f; /* При наведении фон становится более тусклым (уменьшение прозрачности) */
+            box-shadow: 0px 4px 15px rgba(0, 84, 163, 0.61); 
+            background-color: #d6ae0f; 
         }
 
         .dot {
@@ -78,7 +81,7 @@
         </label>
         <ul>
             <li><a href="#">Андрей Белых</a></li>
-            <li><a href="#">Обо мне</a></li>
+            <li><a href="#about" class="scroll-link">Обо мне</a></li>
             <li><a href="#">Портфолио</a></li>
             <li><a href="#">Контакты</a></li>
         </ul>
@@ -91,7 +94,7 @@
             </a>
         </div>
     </nav>
-
+     
     <div class="container">
         <img src="/https-About-me.com/img/IMG_5351.jpg" alt="">
         <div>
@@ -117,12 +120,28 @@
             <span class="button">Резюме</span>
         </a>
     </div>
-
-    <!-- Анимация текста -->
     <div id="animaText" class="text"></div>
     <span class="cursor">|</span>
-    <!-- Скрипт анимации -->
     <script src="main.js"></script>
-    
+    <div class="about-section" id="about">
+        <a href="#top" class="back-to-top">⇅</a>
+        <div class="card-container">
+            <div class="card">
+                <p>Frontend Developer <br>более 3 лет</p>
+            </div>
+            <div class="card">
+                <p>Имею опыт коммерческой разработки приложений с акцентом на баланс скорости, качества кода и удобства сопровождения.</p>
+            </div>
+            <div class="card">
+                <p>Быстро осваиваю и внедряю новые технологии в проекты, адаптируя их под текущие задачи. Эффективно взаимодействую с командой, открытый к новым идеям и оптимизации процессов.</p>
+            </div>
+            <div class="card">
+                <p>В планах — углубление в React Native и Angular. Интерес к настольным играм (D&D) и велоспорту.</p>
+            </div>
+            <!-- <div class="card">
+                <img src="/https-About-me.com/img/IMG_5351.jpg" alt="">
+            </div> -->
+        </div>
+    </div>
 </body>
 </html>

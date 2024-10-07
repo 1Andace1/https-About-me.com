@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeToggle = document.getElementById('theme-toggle');
     let isNight = false;
 
-    // Проверяем текущее состояние переключателя
     themeToggle.addEventListener('change', function () {
         if (themeToggle.checked) {
             document.body.style.backgroundColor = '#333';  // Ночная тема
@@ -13,7 +12,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+document.querySelectorAll('.scroll-link').forEach(link =>{
+    link.addEventListener('click', function(e){
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1); 
+        const targetElement = document.getElementById(targetId);
+        const targetPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = targetPosition + window.pageYOffset - 50;
 
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+document.querySelector('.back-to-top').addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior:'smooth'
+    });
+});
 
 
 
@@ -45,6 +64,4 @@ function erase() {
         setTimeout(erase, 100); 
     }
 }
-
-type(); 
-
+type();
