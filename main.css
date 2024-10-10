@@ -1,16 +1,16 @@
 .navbar {
-    position: fixed; /* Панель фиксируется */
-    top: 0; /* Закрепляем в верхней части экрана */
-    left: 0; /* Сдвигаем к левому краю */
-    width: 100%; /* Ширина на весь экран */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
     background-color: black;
     padding: 20px;
-    height: 60px; /* Высота панели */
-    z-index: 1000; /* Поверх остальных элементов */
+    height: 60px; 
+    z-index: 1000; 
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
 }
 .navbar ul {
     list-style-type: none;
@@ -256,22 +256,28 @@ body {
     height: 5px;
     text-align: center;
     font-size: 32px;
+    color: #000000;
 }
 .cursor { 
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 32px;
-    animation: blink 1s step-end infinite; /* Анимация мигания */
-    margin-left: 320px; /* Отступ между текстом и курсором */
-    margin-top: -20px; /* Поднятие курсора на 20 пикселей вверх */
+    animation: blink 1s step-end infinite;
+    margin-left: 320px; 
+    margin-top: -20px; 
 }
-
-/* Анимация мигания курсора */
 @keyframes blink {
     50% {
-        opacity: 0; /* Прозрачный курсор */
+        opacity: 0; 
     }
+}
+#animaText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 32px;
+    color: rgb(0, 0, 0);
 }
 .about-section {
     height: 100vh; /* Высота для демонстрации прокрутки */
@@ -311,7 +317,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px; 
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .card {
@@ -319,7 +325,8 @@ body {
     border: 2px solid black;
     border-radius: 15px;
     padding: 40px; 
-    max-width: 300px; 
+    flex: 1 1 300px; 
+    max-width: 500px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: all 0.7s ease;
 }
@@ -327,25 +334,75 @@ body {
 .card:hover {
     background-color: #000000; 
 }
+.card img {
+    display: block;
+    margin: 0 auto 20px; 
+    max-width: 80px; 
+    background-color: #f0f0f0;
+}
 
 .card p {
     font-size: 20px; 
-    line-height: 2;
-    text-align: left; /* Текст по левой стороне */
+    line-height: 1.5;
+    text-align: left;
 }
+
 .card p:first-child {
     font-size: 24px;
     font-weight: bold;
     background: linear-gradient(45deg, #2422a1, #d52bff);
     -webkit-background-clip: text;
+    background-clip: text; 
     color: transparent;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease;
 }
-.card:hover p:first-child {
-    color: rgb(32, 32, 32);
+
+.card p:first-child:hover {
+    color: rgb(255, 255, 255); 
 }
+
 .about-section h1 {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .card {
+        max-width: 100%; 
+    }
+}
+.cardOne{
+    background-color: rgb(255, 255, 255); 
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 40px; 
+    max-width: 300px; 
+    box-shadow: 0 4px 100px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+}
+.cardOne p {
+    font-size: 25px; 
+    line-height: 2;
+    text-align: center;
+}
+.cardOne p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #2422a1, #d52bff);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    transition: all 0.2s ease;
+}
+.cardOne p:first-child:hover {
+    color: rgb(255, 255, 255); 
+}
+.cardOne:hover {
+    background-color: #000000; 
 }
 body {
     margin: 0;

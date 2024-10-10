@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.style.color = '#000';
         }
     });
-});
 document.querySelectorAll('.scroll-link').forEach(link =>{
     link.addEventListener('click', function(e){
         e.preventDefault();
@@ -33,8 +32,6 @@ document.querySelector('.back-to-top').addEventListener('click',function(e){
         behavior:'smooth'
     });
 });
-
-
 
 const textme = ["Привет, я Андрей!", "Frontend разработчик", "Добро пожаловать!"];
 let currentPindex = 0;
@@ -65,3 +62,4 @@ function erase() {
     }
 }
 type();
+});
